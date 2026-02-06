@@ -15,10 +15,11 @@
       "kv_namespaces": [
         {
           "binding": "APP_KV",
-          "id": "STAGING_KV_ID"
+          "id": "9346b916016e409994e568f241f4ca0e"
         }
       ]
     },
+
     "production": {
       "name": "my-worker",
       "workers_dev": true,
@@ -29,7 +30,7 @@
       "kv_namespaces": [
         {
           "binding": "APP_KV",
-          "id": "PRODUCTION_KV_ID"
+          "id": "d88218b937be4d1b82f7958050085af0"
         }
       ]
     }
