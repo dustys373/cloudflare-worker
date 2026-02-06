@@ -1,0 +1,50 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "compilerOptions": {
+    /* Language + runtime */
+    "target": "ES2022",
+    "lib": ["ES2022", "WebWorker"],
+
+    /* Modules */
+    "module": "ES2022",
+    "moduleResolution": "Bundler",
+    "resolveJsonModule": true,
+
+    /* JSX (harmless even if unused) */
+    "jsx": "react-jsx",
+
+    /* Type safety */
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true,
+
+    /* Interop */
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+
+    /* Build behavior */
+    "noEmit": true,
+    "isolatedModules": true,
+
+    /* JS allowance (fine for Workers) */
+    "allowJs": true,
+    "checkJs": false,
+
+    /* Tooling */
+    "types": [
+      "@cloudflare/workers-types",
+      "vitest/globals"
+    ]
+  },
+
+  "include": [
+    "src/**/*.ts",
+    "worker-configuration.d.ts"
+  ],
+
+  "exclude": [
+    "node_modules",
+    "test"
+  ]
+}
+
