@@ -2,17 +2,27 @@
   "name": "my-worker",
   "main": "src/index.ts",
   "compatibility_date": "2026-02-05",
-  "workers_dev": false,
-  "minify": true,
-  "observability": {
-    "enabled": true
+  "workers_dev": true,
+
+  "vars": {
+    "APP_NAME": "my-worker"
   },
+
   "env": {
     "staging": {
-      "vars": { "ENV": "staging" }
+      "name": "my-worker-staging",
+      "workers_dev": true,
+      "vars": {
+        "ENV": "staging"
+      }
     },
     "production": {
-      "vars": { "ENV": "production" }
+      "name": "my-worker",
+      "workers_dev": true,
+      "vars": {
+        "ENV": "production"
+      }
     }
   }
 }
+
