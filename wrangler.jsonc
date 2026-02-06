@@ -1,36 +1,38 @@
 {
-	"name": "my-worker",
-	"main": "src/index.ts",
-	"compatibility_date": "2026-02-05",
-	"workers_dev": true,
-	"env": {
-		"staging": {
-			"name": "my-worker-staging",
-			"workers_dev": true,
-			"vars": {
-				"ENV": "staging",
-				"APP_NAME": "my-worker"
-			},
-			"kv_namespaces": [
-				{
-					"binding": "APP_KV",
-					"id": "9346b916016e409994e568f241f4ca0e"
-				}
-			]
-		},
-		"production": {
-			"name": "my-worker",
-			"workers_dev": true,
-			"vars": {
-				"ENV": "production",
-				"APP_NAME": "my-worker"
-			},
-			"kv_namespaces": [
-				{
-					"binding": "APP_KV",
-					"id": "d88218b937be4d1b82f7958050085af0"
-				}
-			]
-		}
-	}
+  "name": "my-worker",
+  "main": "src/index.ts",
+  "compatibility_date": "2026-02-05",
+  "workers_dev": true,
+
+  "env": {
+    "staging": {
+      "name": "my-worker-staging",
+      "workers_dev": true,
+      "vars": {
+        "ENV": "staging",
+        "APP_NAME": "my-worker"
+      },
+      "kv_namespaces": [
+        {
+          "binding": "APP_KV",
+          "id": "STAGING_KV_ID"
+        }
+      ]
+    },
+    "production": {
+      "name": "my-worker",
+      "workers_dev": true,
+      "vars": {
+        "ENV": "production",
+        "APP_NAME": "my-worker"
+      },
+      "kv_namespaces": [
+        {
+          "binding": "APP_KV",
+          "id": "PRODUCTION_KV_ID"
+        }
+      ]
+    }
+  }
 }
+
